@@ -2,8 +2,12 @@
 # -*- coding: utf-8 -*-
 import csv
 import os
+import pandas as pd
 
-with open("departements-france.csv") as f:
-    os.chdir("cible/")
-    for row in f:
-        os.mkdir(row.strip())
+with open("liste-des-immeubles-proteges-au-titre-des-monuments-historiques.csv") as f:
+    os.mkdir("cible2")
+    os.chdir("cible2/")
+#    for row in f:
+#        os.mkdir(row.strip())
+    dframe = pd.read_table(‘liste-des-immeubles-proteges-au-titre-des-monuments-historiques.csv’, sep=’capet’)
+export

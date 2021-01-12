@@ -4,7 +4,6 @@ import csv
 import os
 
 with open("departements-france.csv") as f:
-    os.mkdir("cible")
     os.chdir("cible/")
     for row in f:
         os.mkdir(row.strip())
